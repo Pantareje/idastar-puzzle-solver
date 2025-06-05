@@ -1,0 +1,46 @@
+cabal-version:       2.2
+
+name:                idastar-puzzle-solver
+version:             1.2.1.3
+synopsis:            Solucionador de rompecabezas
+description:         Implementa el algoritmo IDA* para resolver rompecabezas de un tamaño dado.
+homepage:            https://github.com/Pantareje/idastar-puzzle-solver
+bug-reports:         https://github.com/Pantareje/idastar-puzzle-solver/issues
+license:             EUPL-1.2
+license-file:        LICENSE
+author:              Sergio Gil
+extra-source-files:  README.md
+build-type:          Simple
+
+library
+  hs-source-dirs:    src
+  exposed-modules:   IdaStar
+                     Distance
+                     Puzzle
+  build-depends:     base >= 4.7 && < 5
+  default-language:  Haskell2010
+  ghc-options:       -Wall
+                     -Wcompat
+                     -Widentities
+                     -Wincomplete-record-updates
+                     -Wincomplete-uni-patterns
+                     -Wmissing-export-lists
+                     -Wmissing-home-modules
+                     -Wpartial-fields
+                     -Wredundant-constraints
+
+executable práctica4
+  hs-source-dirs:    app
+  main-is:           Main.hs
+  build-depends:     base >= 4.7 && < 5,
+                     idastar-puzzle-solver
+  default-language:  Haskell2010
+  ghc-options:       -Wall
+                     -Wcompat
+                     -Widentities
+                     -Wincomplete-record-updates
+                     -Wincomplete-uni-patterns
+                     -Wmissing-export-lists
+                     -Wmissing-home-modules
+                     -Wpartial-fields
+                     -Wredundant-constraints
