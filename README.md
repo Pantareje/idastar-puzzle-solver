@@ -12,13 +12,6 @@ Este proyecto implementa un solucionador de rompecabezas deslizantes utilizando 
 - Visualiza paso a paso la resolución del rompecabezas.
 - Depende únicamente de la biblioteca base de Haskell.
 
-## Requisitos
-
-- GHC (Glasgow Haskell Compiler).
-- Cabal (sistema de construcción y gestión de paquetes para Haskell).
-
-Al ser un proyecto sencillo, también sería posible compilar los ficheros del código fuente a mano si no se usase Cabal, aunque no es recomendable.
-
 ## Compilación
 
 Para compilar el proyecto, simplemente basta con ejecutar `cabal`:
