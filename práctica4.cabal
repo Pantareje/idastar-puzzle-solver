@@ -1,7 +1,7 @@
 cabal-version:       2.2
 
 name:                idastar-puzzle-solver
-version:             1.2.1.3
+version:             1.3.0.0
 synopsis:            Solucionador de rompecabezas
 description:         Implementa el algoritmo IDA* para resolver rompecabezas de un tamaño dado.
 homepage:            https://github.com/Pantareje/idastar-puzzle-solver
@@ -33,6 +33,28 @@ executable práctica4
   hs-source-dirs:    app
   main-is:           Main.hs
   build-depends:     base >= 4.7 && < 5,
+                     idastar-puzzle-solver
+  default-language:  Haskell2010
+  ghc-options:       -Wall
+                     -Wcompat
+                     -Widentities
+                     -Wincomplete-record-updates
+                     -Wincomplete-uni-patterns
+                     -Wmissing-export-lists
+                     -Wmissing-home-modules
+                     -Wpartial-fields
+                     -Wredundant-constraints
+
+test-suite práctica4-test
+  type:              exitcode-stdio-1.0
+  hs-source-dirs:    test
+  main-is:           Spec.hs
+  other-modules:     DistanceSpec
+                     IdaStarSpec
+                     PuzzleSpec
+  build-depends:     base >= 4.7 && < 5,
+                     hspec >= 2.9 && < 2.12,
+                     hspec-discover >= 2.9 && < 2.12,
                      idastar-puzzle-solver
   default-language:  Haskell2010
   ghc-options:       -Wall
