@@ -14,7 +14,7 @@ import Distance (rectilinear)
 import IdaStar (idaStar)
 
 -- |
--- Representa un puzzle deslizante. Es un tablero deslizante de lado `side`, las
+-- Representa un rompecabezas deslizante. Es un tablero deslizante de lado `side`, las
 -- casillas se representan desde el 0 hasta el número total de casillas, donde 0
 -- representa un hueco a donde deslizar las piezas colindantes.
 data Puzzle = Puzzle
