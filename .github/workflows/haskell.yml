@@ -1,0 +1,30 @@
+name: Haskell CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar entorno Haskell
+        uses: haskell-actions/setup@v2
+
+      - name: Actualizar caché y dependencias
+        run: |
+          cabal update
+          cabal build --only-dependencies
+
+      - name: Instalar hspec-discover
+        run: cabal install hspec-discover
+
+      - name: Compilar pruebas
+        run: cabal build
+
+      - name: Ejecutar pruebas
+        run: cabal test
