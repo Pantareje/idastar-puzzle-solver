@@ -67,8 +67,8 @@ idaStar getNeighbours w h target start = iteration (h start)
 
     -- Buscamos el objetivo desde el nodo actual.
     search currentNode mPrevNode g t
-      | currentNode == target = Left [] -- Hemos llegado al objetivo, devolvemos camino vacío
       | fVal > t = Right fVal -- f(n) > umbral, devolvemos f(n) para actualizar el umbral
+      | currentNode == target = Left [] -- Hemos llegado al objetivo, devolvemos camino vacío
       | otherwise = foldr processMove (Right maxBound) moves -- Exploramos los movimientos posibles
       where
         fVal = g + h currentNode
